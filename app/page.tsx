@@ -1,3 +1,9 @@
+import BentoGrid from "@app/components/bento-grid";
+
 export default function Home() {
-  return <div>hello</div>;
+  return (
+    <div>
+      <BentoGrid />
+    </div>
+  );
 }
