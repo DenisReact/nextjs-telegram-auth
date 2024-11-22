@@ -1,6 +1,14 @@
 import { ITelegramUser } from "@app/types/ITelegramUser";
 import React, { useEffect, useRef } from "react";
 
+declare global {
+  interface Window {
+    TelegramLoginWidget: {
+      dataOnauth: (user: ITelegramUser) => void;
+    };
+  }
+}
+
 interface TelegramLoginButtonProps {
   botName: string;
   buttonSize?: string;
